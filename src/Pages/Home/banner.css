@@ -1,0 +1,25 @@
+.banner-main {
+    min-height: 680px;
+    /* background-color: gray; */
+    font-family: 'Catamaran', sans-serif;
+}
+
+@media screen and (max-width: 640px) {
+    .banner-main {
+        min-height: 450px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1680px) {
+    .banner-main {
+        background-position: top right -235px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .banner-main {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
