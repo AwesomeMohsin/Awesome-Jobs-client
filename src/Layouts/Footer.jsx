@@ -21,6 +21,12 @@ const Footer = () => {
         },
     ];
 
+
+    const handleCallClick = (phoneNumber) => {
+        const telUri = `tel:${phoneNumber}`;
+        window.location.href = telUri;
+    };
+
     const currentYear = new Date().getFullYear();
 
     return (
@@ -46,14 +52,16 @@ const Footer = () => {
                                 <Typography
                                     variant="small"
                                     className="mb-4 text-left font-normal pb-4 flex gap-3 text-blue-gray-900 md:mb-0"
-                                ><FaHome className='text-xl'></FaHome> 1206 DOHS Bypass, Dhaka 1206 
+                                ><FaHome className='text-xl'></FaHome> 1206 DOHS Bypass, Dhaka 1206
                                 </Typography>
 
+
                                 <Typography
-                                    variant="small"
-                                    className="mb-4 text-left font-normal flex gap-3 text-blue-gray-900 md:mb-0"
-                                ><FaPhoneAlt className='text-xl'></FaPhoneAlt> +880 1234567890 
+                                    variant="small">
+                                    <a href="tel:+8801234567890" className="mb-4 text-left font-normal flex gap-3 text-blue-gray-900 md:mb-0" style={{ cursor: "pointer" }} onClick={() => handleCallClick(+8801234567890)}>
+                                        <FaPhoneAlt className='text-xl'></FaPhoneAlt> +880 1234567890</a>
                                 </Typography>
+
 
                                 <Typography
                                     variant="small"
@@ -63,7 +71,7 @@ const Footer = () => {
 
 
 
-                               
+
                             </div>
                         </div>
 
@@ -112,9 +120,9 @@ const Footer = () => {
                                 <button className="text-2xl"
                                 ><FaFacebook></FaFacebook></button>
                             </a>
-     
-                            
-                            
+
+
+
                             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                                 <button className="text-2xl"
                                 ><FaInstagram></FaInstagram></button>
